@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import { Header } from './Components/Header';
+import { LottieAnimation  } from './Components/Lottieanimation';
+import { Mainslider } from './Components/Slider';
+import { Body } from './Components/Body';
+import { About } from './Components/About';
+
+
 
 function App() {
+  
+
+  const [isloading , setisloading] = useState(false)
+
+
+  useEffect(() => {
+       setTimeout(() => {
+         setisloading(true)
+       }, 3000);
+  },[])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+      {
+         !isloading ? <LottieAnimation /> : 
+         <>
+         <  Header />
+         <Mainslider />
+        
+         <Body />
+        <About />
+         </>
+         
+         }
     </div>
   );
 }
