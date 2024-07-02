@@ -18,7 +18,7 @@ export const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <a href="" className="text-white font-bold text-xl flex items-center">
-          <img src={logo} className='h-10 w-10 animate-bounce hover:scale-105' alt="Logo" />
+          <img src={logo} className='h-10 w-10 animate-pulse' alt="Logo" />
           {/* Uncomment and adjust the gradient text as needed */}
           {/* <p className='bg-clip-text bg-gradient-to-r from-blue-400 via-amber-500 to-amber-400 text-2xl text-transparent ml-2'>Raje Mutton Center</p> */}
         </a>
