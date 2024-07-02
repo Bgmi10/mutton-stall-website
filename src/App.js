@@ -7,6 +7,9 @@ import { Body } from './Components/Body';
 import { About } from './Components/About';
 import { Feedback } from './Components/Feedback';
 import { Feedbackslider } from './Components/Feedbackslider';
+import *  as preloader from './Components/Preloader.json'
+import { Contact } from './Components/Contact';
+import { Footer } from './Components/Footer';
 
 
 
@@ -19,7 +22,7 @@ function App() {
   useEffect(() => {
        setTimeout(() => {
          setisloading(true)
-       }, 3000);
+       }, 0);
   },[])
 
 
@@ -27,15 +30,18 @@ function App() {
     <div>
 
       {
-         !isloading ? <LottieAnimation /> : 
+         !isloading ? <LottieAnimation  gif={preloader}/> : 
          <>
          <  Header />
          <Mainslider />
         
          <Body />
-        <About />
+         <Feedbackslider />
         <Feedback />
-        <Feedbackslider />
+        
+        <About />
+        <Contact />
+        <Footer />
          </>
          
          }
