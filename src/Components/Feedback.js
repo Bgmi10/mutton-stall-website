@@ -57,7 +57,7 @@ export const Feedback = () => {
 
   return (
     <>
-   {formsubmission ? <LottieAnimation gif={formgif} /> : <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg">
+   {formsubmission ? <LottieAnimation gif={formgif} /> : <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg sm: w-100px ">
       <h2 className="text-2xl font-semibold text-center mb-4 bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-amber-600  text-transparent ml-2">Rate Your Experience</h2>
       
         <div className="space-y-4">
@@ -86,7 +86,7 @@ export const Feedback = () => {
             <button
               key={index}
               onClick={() => setRatingStar(index + 1)}
-              className={`px-4 py-2 rounded-full ${index + 1 <= ratingStar? 'bg-yellow-400' : 'bg-gray-200'} text-white`}
+              className={`px-4 py-2 rounded-full ${index + 1 <= ratingStar? 'bg-green-400' : 'bg-gray-200'} text-white`}
             >
               <FontAwesomeIcon icon={faStar} />
             </button>

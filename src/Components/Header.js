@@ -20,7 +20,7 @@ export const Header = () => {
         <a href="" className="text-white font-bold text-xl flex items-center">
           <img src={logo} className='h-10 w-10 animate-pulse' alt="Logo" />
           
-          {/* <p className='bg-clip-text bg-gradient-to-r from-blue-400 via-amber-500 to-amber-400 text-2xl text-transparent ml-2'>Raje Mutton Center</p> */}
+          <p className='bg-clip-text bg-gradient-to-r from-amber-800 via-red-800 to-amber-800 text-2xl text-transparent ml-2'>Vellattu Kari </p>
         </a>
 
         <nav>
@@ -29,7 +29,7 @@ export const Header = () => {
             
             <select onChange={e => setlang(e.target.value)}>
               <option value={'en'}>English</option>
-              <option value={'ta'}>Tamil</option>
+              <option value={'ta'}>Tamil</option>c
             </select>
           </ul>
         </nav>

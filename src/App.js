@@ -10,6 +10,7 @@ import { Feedbackslider } from './Components/Feedbackslider';
 import *  as preloader from './Components/Preloader.json'
 import { Contact } from './Components/Contact';
 import { Footer } from './Components/Footer';
+import * as whatsapp from './Components/whatsappgif.json'
 
 
 

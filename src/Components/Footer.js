@@ -14,8 +14,7 @@ export const Footer = () => {
           <nav className="md:ml-10 md:flex flex-wrap items-center text-base justify-center">
             <a href="#one" className="mr-5 hover:text-gray-500">About</a>
             <a href="#two" className="mr-5 hover:text-gray-500">Services</a>
-            <a href="#three" className="mr-5 hover:text-gray-500">Clients</a>
-            <a href="#four" className="mr-5 hover:text-gray-500">Careers</a>
+            
           </nav>
         </div>
         <div className="flex flex-grow pt-4 pb-2 mt-4 lg:mt-0">
@@ -26,7 +25,7 @@ export const Footer = () => {
                   <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div className="p-8">
                       <p className="text-sm font-medium text-center text-gray-500">
-                        For support, contact{' '}
+                        For support, contact{'a '}
                         <a href="#" className="text-indigo-400 hover:text-indigo-500">support@example.com</a>.
                       </p>
                     </div>
