@@ -17,8 +17,8 @@ export const Body = () => {
   
   return (
     <>
-      <div className='flex justify-evenly min-h-screen bg-gray-100'>
-        <div className='border w-full md:w-1/2 lg:w-1/2 xl:w-1/2 mt-20 h-auto md:h-1/2 lg:h-1/2 xl:h-1/2 mb-8 lg:ml-10 sm:p-10 relative'>
+      <div className='flex justify-evenly min-h-screen  p-10'>
+        <div className='border w-full md:w-1/2 lg:w-1/2 xl:w-1/2 mt-20 h-auto md:h-1/2 lg:h-1/2 xl:h-1/2 mb-8 lg:ml-10 sm:p-10 relative p-2'>
           <p className='font-bold text-black lg:ml-32 sm: ml-10 mt-5 mb-6'>
             {togglelang ? lang.en.body : lang.ta.body}
           </p>
