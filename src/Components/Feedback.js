@@ -17,6 +17,18 @@ export const Feedback = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
+
+    if(name === ''){
+      window.alert('name cannot be empty')
+      return;
+
+    }
+    if(feedback === ''){
+      window.alert('feedback cannot be empty')
+      return;
+      
+    }
+    
     try {
      const res =  await addDoc(collection(db, 'feedback'), {
         name,

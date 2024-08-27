@@ -49,31 +49,37 @@ export const Feedbackslider = () => {
   }, []);
 
   return (
-    <section className="py-12 bg-gradient-to-t from-black mb-20 mt-20">
+    <section className="py-12 bg-white mb-20 mt-10">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-extrabold text-center mb-8 ">Latest Feedback</h2>
-        <Slider {...settings} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mr-4  ">
-          {feedbackData.map((item, index) => (
-            <div key={item.id} className=" p-6  bg-gradient-to-tr via-amber-300 from-slate-900 rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-1 hover:shadow-2xl" style={{background: "linear-gradient(to right, #ff9966, #ff5e62)"}}>
-              <div className="  items-center mb-4 ">
-                <p className="font-semibold text-lg">Name:</p>
-                <p>{item.name}</p>
+        <h2 className="text-3xl font-extrabold text-center mb-12 text-gray-900">Latest Feedback</h2>
+        <Slider {...settings} className="flex justify-center">
+          {feedbackData.map((item) => (
+            <div 
+              key={item.id} 
+              className="flex flex-col items-center justify-between p-10 m-5 bg-white rounded-lg shadow-lg transform transition duration-500 hover:-translate-y-1 hover:shadow-2xl mx-4"
+              style={{ minHeight: '300px', maxHeight: '350px', width: '300px' }}
+            >
+              <div className="mb-4 w-full text-center">
+                <p className="font-semibold text-lg text-gray-800">Name:</p>
+                <p className="text-gray-600">{item.name}</p>
               </div>
-              <div className=" items-center mb-4">
-                <p className="font-semibold text-lg">Review:</p>
-                <div className="max-w-xs overflow-hidden whitespace-normal" style={{ maxHeight: '150px' }}>
-                  <p className='font-light text-xl break-words'>{item.feedback}</p>
+              <div className="mb-4 w-full text-center">
+                <p className="font-semibold text-lg text-gray-800">Review:</p>
+                <div className="max-w-xs mx-auto overflow-hidden whitespace-normal" style={{ maxHeight: '150px' }}>
+                  <p className='font-light text-gray-700 text-xl break-words'>{item.feedback}</p>
                 </div>
               </div>
-              <div className="">
-                <h1 className='mb-1 '>Rating : </h1>
-                {[...Array(item.ratingStar)].map((_, i) => (
-                  <FontAwesomeIcon
-                    key={i}
-                    icon={faStar}
-                    className="text-yellow-400 mr-2"
-                  />
-                ))}
+              <div className="w-full text-center">
+                <h1 className='mb-1 text-gray-800'>Rating:</h1>
+                <div className="flex justify-center">
+                  {[...Array(item.ratingStar)].map((_, i) => (
+                    <FontAwesomeIcon
+                      key={i}
+                      icon={faStar}
+                      className="text-yellow-400 mr-2"
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           ))}
