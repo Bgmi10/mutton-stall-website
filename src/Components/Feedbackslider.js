@@ -7,13 +7,13 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 export const Feedbackslider = () => {
   const [feedbackData, setFeedbackData] = useState([]);
+  console.log(feedbackData)
 
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
+    vertical : false ,
     autoplay: true,
     autoplaySpeed: 2000,
     nextArrow: null,
@@ -41,7 +41,7 @@ export const Feedbackslider = () => {
   useEffect(() => {
     const fetchFeedbackDataFromFirebase = async () => {
       const res = await getDocs(collection(db, 'feedback'));
-      const data = res.docs.map(doc => ({...doc.data(), id: doc.id }));
+      const data =  res.docs.map(doc => ({...doc.data(), id: doc.id }));
       setFeedbackData(data);
     };
 
@@ -52,11 +52,11 @@ export const Feedbackslider = () => {
     <section className="py-12 bg-white mb-20 mt-10">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-extrabold text-center mb-12 text-gray-900">Latest Feedback</h2>
-        <Slider {...settings} className="flex justify-center">
-          {feedbackData.map((item) => (
+        <Slider {...settings} className="flex justify-center  ">
+          {feedbackData?.map((item) => (
             <div 
               key={item.id} 
-              className="flex flex-col items-center justify-between p-10 m-5 bg-white rounded-lg shadow-lg transform transition duration-500 hover:-translate-y-1 hover:shadow-2xl mx-4"
+              className="flex  items-center justify-between p-10 m-5 bg-white rounded-lg shadow-lg transform transition duration-500 hover:-translate-y-1 hover:shadow-2xl mx-4"
               style={{ minHeight: '300px', maxHeight: '350px', width: '300px' }}
             >
               <div className="mb-4 w-full text-center">
